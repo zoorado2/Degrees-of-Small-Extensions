@@ -857,9 +857,18 @@ Mathematics and computer science are replete with hierarchies similar to the loc
 
 It turns out that most of the $\mathsf{\Pi^M_n}$'s are unnecessary in this hierarchy. 
 
-\begin{prop}\label{prop252}
-$\mathsf{\Pi^M_{n+1}} \leq^M \mathsf{\Sigma^M_n}$ for all $n$ satisfying $1 \leq n < \omega$.
-\end{prop}
+\begin{lem}\label{prop252}
+Let $n$ satisfy $1 \leq n < \omega$. For every $\mathfrak{T} \in \mathsf{\Pi^M_{n+1}}$ there are
+\begin{itemize}
+    \item $\mathfrak{T}' \in \mathsf{\Sigma^M_n}$, and
+    \item a formula $\theta$ with two free variables,
+\end{itemize}
+such that 
+\begin{itemize}
+    \item $\theta$ is absolute for outer models of $V$, and
+    \item in every outer model of $V$, $\theta$ defines a bijection from the set of models of $\mathfrak{T}$ into the set of models of $\mathfrak{T}'$.
+\end{itemize}
+\end{lem}
 
 \begin{proof}
 Let 
@@ -868,11 +877,7 @@ Let
     \item $\mathfrak{T}  = (T, \sigma, \dot{\mathcal{U}}, \vartheta) \in \mathsf{\Pi^M_{n+1}}$, and 
     \item $\vartheta(\dot{\mathcal{U}}) = (y, z)$.
 \end{itemize} 
-We shall construct $\mathfrak{T}' \in \mathsf{\Sigma^M_n}$ from $\mathfrak{T}$, such that 
-\begin{equation*}
-    \emptyset \neq \mathrm{Eval}^V(\mathfrak{T}') \subset \mathrm{Eval}^V(\mathfrak{T}) \text{.}
-\end{equation*}
-Expand the signature $\sigma$ to $\sigma'$ by adding 
+We shall first construct $\mathfrak{T}' \in \mathsf{\Sigma^M_n}$ from $\mathfrak{T}$. Expand the signature $\sigma$ to $\sigma'$ by adding 
 \begin{itemize}
     \item a unary relation symbol $\dot{T}$, as well as
     \item a constant symbol $\dot{c}$ for each $c \in y$, 
@@ -880,17 +885,44 @@ Expand the signature $\sigma$ to $\sigma'$ by adding
 all of which are new to $\sigma$ and distinct from one another. Define $\vartheta'$ point-wise as follows:
 \begin{gather*}
     \vartheta'(\dot{\mathcal{U}}) := (y, 1) \\
-    \vartheta'(\dot{X}) := \vartheta(\dot{X}) \text{ for all } X \in \sigma \\
+    \vartheta'(\dot{X}) := (y', 0) \text{ whenever } \dot{X} \in \sigma \text{ and } \vartheta(\dot{X}) = (y', z') \\
     \vartheta'(\dot{T}) := (y, z) \\
     \vartheta'(\dot{c}) := (\{c\}, 0) \text{ for all } c \in y \text{.}
 \end{gather*}
-Set 
+
+Next, initialise $T^*$ to be 
 \begin{align*}
-    T^* := T & \cup \{\ulcorner \forall x_1 \dots \forall x_k \ \exists x_{k+1} \ (\dot{F}(x_1, \dots, x_k) = x_{k+1}) \urcorner \\
-    & \mspace{25mu} : \dot{F} \in \sigma \text{ is a } k \text{-ary function symbol}\} \\
-    & \cup \{\ulcorner \dot{T}(\dot{a}) \urcorner : \dot{a} \in \sigma \text{ is a constant symbol}\} \text{,}
+    T & \cup \{\ulcorner \forall x_1 \dots \forall x_k \ \exists x_{k+1} \ (\dot{F}(x_1, \dots, x_k) = x_{k+1}) \urcorner \\
+    & \mspace{25mu} : \dot{F} \in \sigma \text{ is a } k \text{-ary function symbol}\} \text{.}
 \end{align*}
-so $T^*$, like $T$, contains only $\Pi_{n+1}$ sentences.
+For each $\dot{X} \in \sigma$, so that $\vartheta(\dot{X})$ is of the form $(y', z')$, do the following.
+\begin{enumerate}[label=Case (\arabic*)$_{\dot{X}}$:, leftmargin=70pt]
+    \item $\dot{X}$ is a $k$-ary function symbol. Without loss of generality, we can assume $y' \subset y^{k+1}$. Add to $T^*$ every member of the set
+    \begin{align*}
+        \{ & \ulcorner \dot{X}(\dot{c}_1, \ldots, \dot{c}_k) = \dot{c}_{k+1} \implies \dot{T}(\dot{c}_1) \wedge \ldots \wedge \dot{T}(\dot{c}_{k+1}) \urcorner \\
+        & : (c_1, \ldots, c_{k+1}) \in y'\} \text{.}
+    \end{align*}
+    If in addition, $z' = 1$, then also add to $T^*$ every member of the set
+    \begin{align*}
+        \{ & \ulcorner \dot{T}(\dot{c}_1) \wedge \ldots \wedge \dot{T}(\dot{c}_{k+1}) \implies \dot{X}(\dot{c}_1, \ldots, \dot{c}_k) = \dot{c}_{k+1} \urcorner \\
+        & : (c_1, \ldots, c_{k+1}) \in y'\} \text{.}
+    \end{align*}
+    \item $\dot{X}$ is a $k$-ary relation symbol. Without loss of generality, we can assume $y' \subset y^k$. Add to $T^*$ every member of the set
+    \begin{align*}
+        \{ & \ulcorner \dot{X}(\dot{c}_1, \ldots, \dot{c}_k) \implies \dot{T}(\dot{c}_1) \wedge \ldots \wedge \dot{T}(\dot{c}_k) \urcorner \\
+        & : (c_1, \ldots, c_k) \in y'\} \text{.}
+    \end{align*}
+    If in addition, $z' = 1$, then also add to $T^*$ every member of the set
+    \begin{align*}
+        \{ & \ulcorner \dot{T}(\dot{c}_1) \wedge \ldots \wedge \dot{T}(\dot{c}_k) \implies \dot{X}(\dot{c}_1, \ldots, \dot{c}_k) \urcorner \\
+        & : (c_1, \ldots, c_k) \in y'\} \text{.}
+    \end{align*}
+    \item $\dot{X}$ is a constant symbol. Without loss of generality, we can assume $y' \subset y$. Add to $T^*$ the sentence
+    \begin{align*}
+        \ulcorner \dot{T}(\dot{X}) \urcorner \text{.}
+    \end{align*}
+\end{enumerate}
+Now $T^*$, like $T$, contains only $\Pi_{n+1}$ sentences.
 
 Fix any formula $\phi \in T^*$. Then $\phi$ is of the form 
 \begin{equation*}
@@ -899,7 +931,7 @@ Fix any formula $\phi \in T^*$. Then $\phi$ is of the form
 where $k < \omega$ and $\varphi$ is a $\Sigma_n$ formula of which leading quantifier --- should it exist --- is not a universal quantifier. Note that such $k$ and $\varphi$ are unique for $\phi$. If $\Vec{a} \in {^{k}{\{\dot{c} : c \in y\}}}$, use $\phi_{\Vec{a}}$ to denote the result of running the following procedure on $\phi$.
 \begin{enumerate}[label=(\arabic*)]
     \item For each subformula $\psi$ containing at least one quantifier, in descending order of length (which is necessarily linear due to $\phi$ being in prenex normal form), do as per the cases below.
-    \begin{enumerate}[label=Case \arabic*:, leftmargin=50pt]
+    \begin{enumerate}[label=Case (\arabic*)$_{\psi}$:, leftmargin=70pt]
         \item $\psi = \ulcorner \forall x \ \psi' \urcorner$ for some $x$ and $\psi'$. In this case, replace $\psi'$ with the string
         \begin{equation*}
             \ulcorner (\dot{T}(x) \implies \psi') \urcorner \text{.}
@@ -916,15 +948,27 @@ It is not hard to verify that the aforementioned procedure is well-defined and p
 \begin{equation*}
     T_{\phi} := \{\phi_{\Vec{a}} : \Vec{a} \in {^{k}{\{\dot{c} : c \in y\}}}\}
 \end{equation*}
-is a set of $\Sigma_n$ sentences over $\sigma'$. Now let 
+is a set of $\Sigma_n$ sentences over $\sigma'$. We set 
 \begin{equation*}
-    T' := \bigcup \{T_{\phi} : \phi \in T^*\} \text{,}
+    T' := \bigcup \{T_{\phi} : \phi \in T^*\} \text{.}
 \end{equation*}
-so that $\mathfrak{T}' := (T', \sigma', \dot{\mathcal{U}}, \vartheta') \in \mathsf{\Sigma^M_n}$. Then given any model $\mathcal{M}$ of $\mathfrak{T}'$, $\dot{T}^{\mathcal{M}}$ defines (in the standard way) a substructure of $\mathcal{M} \restriction \sigma$ that models $\mathfrak{T}$, where
-\begin{equation*}
-    \mathcal{M} \restriction \sigma := \text{ the unique reduct of } \mathcal{M} \text{ with signature } \sigma \text{.} \qedhere
-\end{equation*} 
+so that $\mathfrak{T}' := (T', \sigma', \dot{\mathcal{U}}, \vartheta') \in \mathsf{\Sigma^M_n}$. Then the following hold true in every outer model of $V$.
+\begin{enumerate}[label=(T\arabic*)]
+    \item\label{316t1} Given any model $\mathcal{M}$ of $\mathfrak{T}'$,
+    \begin{equation*}
+        (\dot{T}^{\mathcal{M}}; \sigma^{\mathcal{M}})
+    \end{equation*} 
+    is a model of $\mathfrak{T}$. 
+    \item\label{316t2} Every model of $\mathfrak{T}$ can be uniquely and constructively extended and expanded to a model of $\mathfrak{T}'$.
+\end{enumerate}
+It is clear that the transformations involved in \ref{316t1} and \ref{316t2} are absolute for outer models of $V$.
 \end{proof}
+
+An important upshot of Lemma \ref{prop252} is the corollary below.
+
+\begin{cor}
+$\mathsf{\Pi^M_{n+1}} \leq^M \mathsf{\Sigma^M_n}$ for all $n$ satisfying $1 \leq n < \omega$.
+\end{cor}
 
 We are interested in how $\mathsf{Fg}$ might fit into this hierarchy. To that end, let us first make a simple observation.
 
@@ -933,7 +977,7 @@ $\mathsf{Fg} \leq^M \mathsf{\Sigma^M_1}$.
 \end{prop}
 
 \begin{proof}
-For all forcing notions $\mathbb{P}$, the TCI $\mathfrak{T}(\mathbb{P})$ is always a member of $\mathsf{\Pi^M_2}$ by the proof of Proposition \ref{prop323}. That $\mathfrak{T}(\cdot)$ is definable in $V$ makes it a witness to $\mathsf{Fg} \leq^M \mathsf{\Pi^M_2}$. Proposition \ref{prop252} then implies $\mathsf{Fg} \leq^M \mathsf{\Sigma^M_1}$.
+For all forcing notions $\mathbb{P}$, the TCI $\mathfrak{T}(\mathbb{P})$ is always a member of $\mathsf{\Pi^M_2}$ by the proof of Proposition \ref{prop323}. That $\mathfrak{T}(\cdot)$ is definable in $V$ makes it a witness to $\mathsf{Fg} \leq^M \mathsf{\Pi^M_2}$. Lemma \ref{prop252} then implies $\mathsf{Fg} \leq^M \mathsf{\Sigma^M_1}$.
 \end{proof}
 
 \begin{lem}\label{lem344}
