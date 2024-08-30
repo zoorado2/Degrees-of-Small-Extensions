@@ -255,9 +255,10 @@ We can characterise members $\mathbf{M}_{S}(U)$ in a way that is conducive to th
 
 \begin{prop}\label{prop37}
 Let $U$ be a CTM. Then
-\begin{equation*}
-    \mathbf{M}_{S}(U) = \{U[x] : x \in (\bigcup \mathbf{M}(U)) \cap \mathcal{P}(ORD^U)\} \text{.}
-\end{equation*}
+\begin{align*}
+    \mathbf{M}_{S}(U) & = \{U[x] : x \in \bigcup \mathbf{M}(U) \cap \mathcal{P}(U)\} \\
+    & = \{U[x] : x \in \bigcup \mathbf{M}(U) \cap \mathcal{P}(ORD^U)\} \text{.}
+\end{align*}
 \end{prop}
 
 \begin{proof}
@@ -266,7 +267,7 @@ By Fact \ref{fact34} and Proposition \ref{prop35}.
 
 Proposition \ref{prop37} gives us a natural reducibility relation on 
 \begin{equation*}
-    \mathbf{N}(U) := (\bigcup \mathbf{M}(U)) \cap \mathcal{P}(ORD^U)
+    \mathbf{N}(U) := \bigcup \mathbf{M}(U) \cap \mathcal{P}(ORD^U)
 \end{equation*}
 given a CTM $U$. 
 
@@ -427,10 +428,20 @@ A much stronger and much more useful statement would be
 \end{equation}
 Let us sketch how this can be true. We start with a universe $V$, force (with a proper class forcing notion) to an outer model $V[G]$ of $V$ satisfying ``$V[G]$ is not a set forcing extension of $V$'', then apply Fact \ref{fact37} to $V[G]$. The end result is an outer model $W$ of $V[G]$ such that $W = L^V[r]$ for some real $r \in W$. This can even be arranged such that $V$ is a definable class in $W$. Now if $W$ is a set forcing extension of $V$, then so are all intermediate outer models of $V$, including $V[G]$. But we have just ensured $V[G]$ is not a set forcing extension of $V$. 
 
-The argument above, which includes the proof of Fact \ref{fact37}, can be formalised in a conservative second order extension of $\mathsf{ZFC}$ (the second-order portion is needed for proper class forcing), so our meta-theory suffices when $V$ is a CTM. We have thus established --- albeit sketchily so --- the following.
+This argument, which includes a proof of Fact \ref{fact37}, can be formalised in a conservative second order extension of $\mathsf{ZFC}$ (the second-order portion is needed for proper class forcing), so our meta-theory suffices when $V$ is a CTM. We have thus established --- albeit sketchily so --- the following.
 
 \begin{fact}\label{fact319}
 (\ref{eq31}) holds.
+\end{fact}
+
+In actuality, we can switch $V$ for any $U \in \mathbf{M}_S(V)$ in the argument above and obtain a stronger conclusion.
+
+\begin{fact}
+Let $V$ be a CTM. Then
+\begin{equation*}
+    \mathbf{M}_S(V) \setminus \mathbf{M}_F(V)
+\end{equation*}
+is cofinal in $(\mathbf{M}_S(V), \subset)$.
 \end{fact}
 
 \subsection{Theories with Constraints in Interpretation}
