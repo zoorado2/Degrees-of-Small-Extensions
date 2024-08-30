@@ -181,6 +181,17 @@ In this case, we say, equivalently,
 \end{itemize}
 \end{defi}
 
+The following observation is trivial.
+
+\begin{ob}
+The binary relations 
+\begin{itemize}
+    \item ``being an outer model of'', and
+    \item ``being a small extension of''
+\end{itemize}
+are both transitive.
+\end{ob}
+
 We know that certain sets in outer models can always be used to generate small extensions.
 
 \begin{fact}\label{fact34}
@@ -364,7 +375,23 @@ If $\mathbb{P}$ is a forcing notion in $V$, $p \in \mathbb{P}$, $\phi$ is a form
 
 Theorem \ref{thm310} intricately connects the forcing relation $\Vdash_{\mathbb{P}}^V$ with truth in $\mathbb{P}$-generic extensions and is fundamental to forcing as a technique. Colloquially known as the \emph{forcing theorem}, it enables us to reason about truth in generic extensions from within the ground model, and often reduces the argument from one about semantic entailment to one pertaining to combinatorial properties of partial orders. For more details about forcing and the proof of the forcing theorem, the reader is encouraged to read Chapter IV of \cite{kunen}. 
 
-A careful reader might have noticed the overloading of the notation $\cdot [\cdot]$ to represent both small extensions and forcing extensions. This is intentional, for the latter class is subsumed under the former by the following fact.
+It turns out that forcing extensions of a CTM $V$ are downward-closed in $\mathbf{M}(V)$ (and thus, also in $\mathbf{M}_S(V)$). This is just a rephrasing of the fact below.
+
+\begin{fact}\label{fact221}
+Let $V \subset U \subset W$ be CTMs such that
+\begin{itemize}
+    \item $W$ is a forcing extension of $V$, 
+    \item $U$ is an outer model of $V$, and
+    \item $U$ is an inner model of $W$.
+\end{itemize}
+Then 
+\begin{itemize}
+    \item $U$ is a forcing extension of $V$, and
+    \item $W$ is a forcing extension of $U$.
+\end{itemize}
+\end{fact}
+
+A careful reader might have noticed the overloading of the notation $\cdot [\cdot]$ to represent both small extensions and forcing extensions. This is intentional, for the latter class is subsumed under the former.
 
 \begin{fact}
 Let $g$ be $\mathbb{P}$-generic over a CTM $V$ for some $\mathbb{P} \in V$. Then $V[g]$ is the smallest CTM $W$ for which
@@ -436,13 +463,15 @@ This argument, which includes a proof of Fact \ref{fact37}, can be formalised in
 
 In actuality, we can switch $V$ for any $U \in \mathbf{M}_S(V)$ in the argument above and obtain a stronger conclusion.
 
-\begin{fact}
-Let $V$ be a CTM. Then
+\begin{fact}\label{fact229}
+Given a CTM $V$,
 \begin{equation*}
-    \mathbf{M}_S(V) \setminus \mathbf{M}_F(V)
+    (\mathbf{M}_S(V) \setminus \mathbf{M}_F(V), \subset)
 \end{equation*}
-is cofinal in $(\mathbf{M}_S(V), \subset)$.
+is a cofinal subposet of $(\mathbf{M}_S(V), \subset)$.
 \end{fact}
+
+Intuitively, Facts \ref{fact221} and \ref{fact229} tell us that there are many objects inaccessible by forcing. Do these objects have ``local first-order properties'' not shared by any set in any forcing extension? Much of the rest of this paper aims for a partial answer to the aforementioned question. 
 
 \subsection{Theories with Constraints in Interpretation}
 
