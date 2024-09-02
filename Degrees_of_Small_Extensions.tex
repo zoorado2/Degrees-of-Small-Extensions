@@ -555,7 +555,7 @@ A TCI $(T, \sigma, \dot{\mathcal{U}}, \vartheta)$ is \emph{consistent} iff $(T, 
 It might seem at first glance, that the the consistency of a TCI is not a first-order property in the language of set theory, since it involves quantifying over all outer models. This is not a real problem because said definition is semantically equivalent to a first-order sentence in $V$ with parameters in $V$.
 
 \begin{lem}\label{lem329}
-Let $\mathfrak{T} = (T, \sigma, \dot{\mathcal{U}}, \vartheta)$ be a TCI. Then $\mathfrak{T}$ is consistent iff $$\Vdash_{Col(\omega, \lambda)} \exists \mathcal{M} \ (``\mathcal{M} \models^* \mathfrak{T}"),$$ where $\lambda := |H(|trcl(\mathfrak{T})|^+)|$.
+Let $\mathfrak{T} = (T, \sigma, \dot{\mathcal{U}}, \vartheta)$ be a TCI. Then $\mathfrak{T}$ is consistent iff $$\Vdash_{Col(\omega, \lambda)} \exists \mathcal{M} \ (``\mathcal{M} \models^* \mathfrak{T}"),$$ where $\lambda \geq |H(|trcl(\mathfrak{T})|^+)|$.
 \end{lem}
 
 \begin{proof}
@@ -1061,8 +1061,9 @@ besides the obvious fact that it is countable and non-zero. Indeed, there seems 
 \begin{ques}
 \leavevmode
 \begin{enumerate}[label=(\arabic*)]
-    \item Are there $m, n < \omega$ for which $\mathsf{\Sigma^M_m} \neq \mathsf{\Sigma^M_n}$?
-    \item Is there $n < \omega$ for which $\mathsf{\Pi^M_1} \neq \mathsf{\Sigma^M_n}$?
+    \item Are there $m, n < \omega$ for which $\mathsf{\Sigma^M_m} \not\equiv^M \mathsf{\Sigma^M_n}$?
+    \item Is it true that $\mathsf{\Pi^M_1} \leq^M \mathsf{\Sigma^M_0}$?
+    \item Is there a TCI $\mathfrak{T}$ such that $\{\mathfrak{T}\} \not\leq^M \mathsf{Fg}$?
 \end{enumerate}
 \end{ques}
 
