@@ -375,6 +375,44 @@ If $\mathbb{P}$ is a forcing notion in $V$, $p \in \mathbb{P}$, $\phi$ is a form
 
 Theorem \ref{thm310} intricately connects the forcing relation $\Vdash_{\mathbb{P}}^V$ with truth in $\mathbb{P}$-generic extensions and is fundamental to forcing as a technique. Colloquially known as the \emph{forcing theorem}, it enables us to reason about truth in generic extensions from within the ground model, and often reduces the argument from one about semantic entailment to one pertaining to combinatorial properties of partial orders. For more details about forcing and the proof of the forcing theorem, the reader is encouraged to read Chapter IV of \cite{kunen}. 
 
+\begin{defi}
+Define the relation $\leq_F$ on the set of CTMs as follows:
+\begin{equation*}
+    M \leq_F N \iff N \text{ is a forcing extension of } M \text{.}
+\end{equation*}
+\end{defi}
+
+\begin{defi}
+A \emph{(full) generic multiverse} is any set of CTMs closed under $\leq_F$.
+\end{defi}
+
+\begin{defi}
+Let $V$ be a CTM. The \emph{(forcing) grounds of} $V$ is the set
+\begin{equation*}
+    \{W : V \text{ is a forcing extension of } W\} \text{.}
+\end{equation*}
+\end{defi}
+
+\begin{defi}
+Let $V$ be a CTM. The \emph{outward generic multiverse centred at} $V$ is the set
+\begin{equation*}
+    \mathbf{M}_F(V) := \{W : W \text{ is a forcing extension of } V\} \text{.}
+\end{equation*}
+\end{defi} 
+
+The study of generic multiverses, including the coining of the term itself, arguably begins with Woodin in \cite{woodingen}. Since then, much has been studied about the structure of standard generic multiverses under $\leq_F$, with a particularly strong focus on the forcing grounds of fixed CTMs. On the other hand, there has been less interest in the structure of outward generic multiverses under $\leq_F$, perhaps due to the dearth of low-hanging fruits --- a large part of what is known about this structure are essentially theorems about forcing in the traditional sense.
+
+A careful reader might have noticed the overloading of the notation $\cdot [\cdot]$ to represent both small extensions and forcing extensions. This is intentional, for the latter class is subsumed under the former.
+
+\begin{fact}
+For some $\mathbb{P} \in V$, let $g$ be a $\mathbb{P}$-generic filter over a CTM $V$. Then $V[g]$ is the smallest CTM $W$ for which
+\begin{itemize}
+    \item $V \subset W$, and
+    \item $g \in W$.
+\end{itemize}
+As a consequence, $\mathbf{M}_F(V) \subset \mathbf{M}_S(V)$.
+\end{fact}
+
 It turns out that forcing extensions of a CTM $V$ are downward-closed in $\mathbf{M}(V)$ (and thus, also in $\mathbf{M}_S(V)$). This is just a rephrasing of the fact below.
 
 \begin{fact}\label{fact221}
@@ -391,44 +429,11 @@ Then
 \end{itemize}
 \end{fact}
 
-A careful reader might have noticed the overloading of the notation $\cdot [\cdot]$ to represent both small extensions and forcing extensions. This is intentional, for the latter class is subsumed under the former.
-
-\begin{fact}
-Let $g$ be $\mathbb{P}$-generic over a CTM $V$ for some $\mathbb{P} \in V$. Then $V[g]$ is the smallest CTM $W$ for which
-\begin{itemize}
-    \item $V \subset W$, and
-    \item $g \in W$.
-\end{itemize}
-\end{fact}
-
-\begin{defi}
-Define the relation $\leq_F$ on the set of CTMs as follows:
-\begin{equation*}
-    M \leq_F N \iff N \text{ is a forcing extension of } M \text{.}
-\end{equation*}
-\end{defi}
-
-\begin{defi}
-A \emph{(standard) generic multiverse} is any set of CTMs closed under $\leq_F$.
-\end{defi}
-
-\begin{defi}
-Let $V$ be a CTM. The \emph{(forcing) grounds of} $V$ is the set
-\begin{equation*}
-    \{W : V \text{ is a forcing extension of } W\} \text{.}
-\end{equation*}
-\end{defi}
-
-\begin{defi}
-Let $V$ be a CTM. The \emph{outward generic multiverse centred at} $V$ is the set
-\begin{equation*}
-    \mathbf{M}_F(V) := \{W : W \text{ is a forcing extension of } V\} \text{.}
-\end{equation*}
-\end{defi}
-
-The study of generic multiverses, including the coining of the term itself, arguably begins with Woodin in \cite{woodingen}. Since then, much has been studied about the structure of standard generic multiverses under $\leq_F$, with a particularly strong focus on the forcing grounds of fixed CTMs. On the other hand, there has been less interest in the structure of outward generic multiverses under $\leq_F$, perhaps due to the dearth of low-hanging fruits --- a large part of what is known about this structure are essentially theorems about forcing in the traditional sense.
-
-Now that we know $\mathbf{M}_F(V) \subset \mathbf{M}_S(V)$ for all CTMs $V$, an immediate question is, must $\mathbf{M}_F(V)$ always equal $\mathbf{M}_S(V)$? There is an easy argument for the answer being ``no'', if we assume a sufficiently strong large cardinal axiom in addition to $\mathsf{ZFC}$.
+An immediate follow-up question to the previous two facts is, 
+\begin{quote}
+    ``Must $\mathbf{M}_F(V)$ always equal $\mathbf{M}_S(V)$?''
+\end{quote}
+There is an easy argument for the answer being ``no'', if we assume a sufficiently strong large cardinal axiom in addition to $\mathsf{ZFC}$.
 
 \begin{prop}\label{prop318}
 Let 
@@ -447,7 +452,7 @@ Given the hypothesis of the proposition, there is a CTM $W$ satisfying $\mathsf{
 where $I$ is an uncountable set of Silver indiscernibles in $W$ witnessing the fact that $0^{\sharp}$ exists. Then $U$ is a small extension of $V$ generated by $I \in U$ but not a forcing extension of $V$.
 \end{proof}
 
-By Proposition \ref{prop318}, it is consistent that $\mathbf{M}_S(V)$ is non-trivial --- and includes at least one important yet non-trivial subset --- under strong enough assumptions. However, the small outward multiverse example exhibited by the proof of the proposition is undesirable because it is centred at a universe that is by many measures, ``too small'' (e.g. it has a trivial theory of constructibility degrees). 
+By Proposition \ref{prop318}, it is consistent that $\mathbf{M}_S(V) \setminus \mathbf{M}_F(V)$ is non-trivial --- and includes at least a cone of $(\mathbf{M}_S(V), \subset)$ --- under strong enough assumptions. However, the small outward multiverse example exhibited by the proof of the proposition is undesirable because it is centred at a universe that is by many measures, ``too small'' (e.g. it has a trivial theory of constructibility degrees). 
 
 A much stronger and much more useful statement would be
 \begin{equation}\label{eq31}
