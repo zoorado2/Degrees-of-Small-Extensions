@@ -1015,7 +1015,7 @@ An important upshot of Lemma \ref{prop252} is the corollary below.
 $\mathsf{\Pi^M_{n+1}} \leq^M \mathsf{\Sigma^M_n}$ for all $n$ satisfying $1 \leq n < \omega$.
 \end{cor}
 
-We are interested in how $\mathsf{Fg}$ might fit into this hierarchy. To that end, let us first make a simple observation.
+We are interested in how $\mathsf{Fg}$ might fit into the local method hierarchy. To that end, let us first make a simple observation.
 
 \begin{prop}\label{prop343}
 $\mathsf{Fg} \leq^M \mathsf{\Sigma^M_1}$.
@@ -1110,6 +1110,32 @@ For each TCI $\mathfrak{T} \in V$, set
     \mathbb{P}(\mathfrak{T}) := (P(\mathfrak{T}), \supset \cap \ P(\mathfrak{T})) \text{.}
 \end{equation*}
 \end{defi}
+
+\begin{rem}
+Now that $\mathbb{P}(\mathfrak{T})$ has been defined for all TCIs $\mathfrak{T}$, it is clear from Lemma \ref{prop252} and Proposition \ref{prop343} that Question 5.70 of \cite{myself} can be answered in the affirmative. In other words, letting
+\begin{equation*}
+    \mathcal{C} := \{\mathfrak{T} : \mathfrak{T} \text{ is a } \Sigma_1 \text{ TCI}\} \text{,}
+\end{equation*}
+we can conclude the following:
+\begin{enumerate}[label=(\alph*)]
+    \item $\mathcal{C} \subsetneq \{\mathfrak{T} : \mathfrak{T} \text{ is a } \Pi_2 \text{ TCI}\}$, and
+    \item for each forcing notion $\mathbb{P}$, there is $\mathfrak{T} \in \mathcal{C}$ for which
+    \begin{itemize}
+        \item $\mathbb{P}$ and $\mathbb{P}(\mathfrak{T})$ are forcing equivalent, and
+        \item 
+        \!
+        $\begin{aligned}[t]
+            & \{V[\mathcal{M}] : \mathcal{M} \models^* \mathfrak{T} \text{ in an outer model of } V\} \\
+            & \mspace{70mu} = \{V[g] : g \text{ is } \mathbb{P} \text{-generic over } V\} \text{,}
+        \end{aligned}$
+    \end{itemize}
+    so that also
+    \begin{align*}
+        & \{V[\mathcal{M}] : \mathcal{M} \models^* \mathfrak{T} \text{ in an outer model of } V\} \\
+        & = \{V[g] : g \text{ is } \mathbb{P}(\mathfrak{T}) \text{-generic over } V\} \text{.}
+    \end{align*}
+\end{enumerate} 
+\end{rem}
 
 The definable function $\mathfrak{T} \mapsto \mathfrak{T}(\mathbb{P}(\mathfrak{T}))$, restricted to $\mathsf{\Pi^M_2}$, will be our witness to $\mathsf{\Pi^M_2} \leq^M \mathsf{Fg}$. A trivial observation is that \ref{3441} and \ref{3442} of Proposition \ref{lem344} hold for $\mathbb{P}(\mathfrak{T})$ and $P(\mathfrak{T})$ in place of $\mathbb{P}$ and $P$ respectively. Furthermore, it is always true that
 \begin{equation*}
