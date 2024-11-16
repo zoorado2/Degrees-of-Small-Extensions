@@ -567,14 +567,7 @@ Let $\mathfrak{T} = (T, \sigma, \dot{\mathcal{U}}, \vartheta)$ be a TCI. Then $\
 This is Lemma 5.25 of \cite{myself}.
 \end{proof}
 
-Lemma \ref{lem329} gives us a uniform way of checking in $V$ if a TCI is consistent, by appealing to a suitable forcing relation. For ease of expression and reading, we define the abbreviation
-\begin{equation*}
-    \mathfrak{A}_{\mathfrak{T}} := (H(|trcl(\mathfrak{T})|^+); \in) \text{.}
-\end{equation*}
-
-\begin{ob}\label{ob331}
-It is easily verifiable from the definitions of $\mathcal{L}_{\mathfrak{T}}$ and $\mathfrak{A}_{\mathfrak{T}}$ that $\mathcal{L}_{\mathfrak{T}} \in \mathfrak{A}_{\mathfrak{T}}$, so we have $[\mathcal{L}_{\mathfrak{T}}]^{< \omega} \in \mathfrak{A}_{\mathfrak{T}}$ as well.
-\end{ob}
+Lemma \ref{lem329} gives us a uniform way of checking in $V$ if a TCI is consistent, by appealing to a suitable forcing relation. 
 
 Morally speaking, the consistency of a theory --- however it is defined --- should be absolute in a strong enough sense. This is the case for first-order theories, any of which consistency is absolute for transitive models of set theory. The following Lemma establishes a similar absoluteness property with regards to the consistency of a TCI.
 
@@ -598,51 +591,6 @@ in $V'$. Note that
     \mathbb{P} := Col(\omega, \lambda)^{V'}
 \end{equation*} 
 remains a forcing notion in $W$, so consider $g$ a $\mathbb{P}$-generic filter over $W$. Necessarily, $g$ is also $\mathbb{P}$-generic over $V'$, and further, $V'[g] \subset W[g]$. In $V'[g]$, $\mathfrak{T}$ is forced to have a model --- call it $\mathcal{M}$. Being a model of $\mathfrak{T}$ is absolute for transitive models of $\mathsf{ZFC}$, so $\mathcal{M} \models^* \mathfrak{T}$ holds in $W[g]$ too. Since $W[g]$ is an outer model of $W$, $\mathfrak{T}$ must be consistent in $W$.
-\end{proof}
-
-\begin{defi}
-A triple $(\mathfrak{T}$, $\mathfrak{A}, \mathbb{P})$ is \emph{generically sensible} iff 
-\begin{itemize}
-    \item $\mathfrak{T}$ is a TCI,
-    \item $\mathfrak{A} = (A; \in, \Vec{R})$ is a structure expanding on a transitive model of $\mathsf{ZFC - Powerset}$,
-    \item $\mathbb{P}$ is a forcing notion, and
-    \item $\{\mathfrak{T}, \mathbb{P}\} \subset A$.
-\end{itemize}
-\end{defi}
-
-\begin{defi}[Lau, \cite{myself}]
-Given a generically sensible triple $(\mathfrak{T}$, $\mathfrak{A}, \mathbb{P})$, a $(\mathbb{P}, \mathfrak{A})$\emph{-generic model} of $\mathfrak{T}$ is a model $\mathcal{M}$ of $\mathfrak{T}$ satisfying 
-\begin{equation*}
-    \Sigma(\mathfrak{T}, \mathcal{M}) = (\bigcup g) \cap \mathcal{L}_{\mathfrak{T}}
-\end{equation*} 
-for some $\mathbb{P}$-generic filter $g$ over $\mathfrak{A}$. In this case, we say $g$ \emph{witnesses} $\mathcal{M}$ \emph{is a} $(\mathbb{P}, \mathfrak{A})$-\emph{generic model of} $\mathfrak{T}$. We say $g$ \emph{witnesses a} $(\mathbb{P}, \mathfrak{A})$-\emph{generic model of} $\mathfrak{T}$ iff for some (necessarily unique) $\mathcal{M}$, $g$ witnesses $\mathcal{M}$ is a $(\mathbb{P}, \mathfrak{A})$-generic model of $\mathfrak{T}$.
-
-We call $\mathcal{M}$ a $\mathfrak{A}$\emph{-generic model} of $\mathfrak{T}$ iff for some $\mathbb{P}$, $(\mathfrak{T}$, $\mathfrak{A}, \mathbb{P})$ is generically sensible and $\mathcal{M}$ is a $(\mathbb{P}, \mathfrak{A})$-generic model of $\mathfrak{T}$.
-
-We call $\mathcal{M}$ a \emph{generic model} of $\mathfrak{T}$ iff for some $\mathfrak{A}$ and $\mathbb{P}$, $(\mathfrak{T}$, $\mathfrak{A}, \mathbb{P})$ is generically sensible and $\mathcal{M}$ is a $(\mathbb{P}, \mathfrak{A})$-generic model of $\mathfrak{T}$.   
-\end{defi}
-
-\begin{ob}[Lau, \cite{myself}]\label{smallvgen}
-\leavevmode
-\begin{enumerate}[label=(\arabic*)]
-    \item\label{5282} If $g$ witnesses $\mathcal{M}$ is a $(\mathbb{P}, V)$-generic model of $\mathfrak{T}$, and $\bigcup g \subset \mathcal{L}_{\mathfrak{T}}$, then $V[g] = V[\mathcal{M}]$.
-    \item\label{2svg} In the same vein as Observation \ref{ob0}, we see that given any consistent $\Pi_2$ TCI $\mathfrak{T}$, 
-    \begin{align*}
-        \forall x \ ( & x \text{ is a } (\mathbb{P}(\mathfrak{T}), \mathfrak{A}_{\mathfrak{T}}) \text{-generic model of } \mathfrak{T} \\
-        & \iff x \text{ is a } (\mathbb{P}(\mathfrak{T}), V) \text{-generic model of } \mathfrak{T})
-    \end{align*}
-   in every outer model of $V$. As a result, we can safely talk about $(\mathbb{P}(\mathfrak{T}), V)$-generic models of $\mathfrak{T}$ without the need to quantify over all sets.
-\end{enumerate}
-\end{ob}
-
-Our definition of a generic model is actually born from a nice characterisation of what we expect a generic model to be.
-
-\begin{lem}\label{gmodelsinfe}
-Let $\mathfrak{T}$ be a TCI. If $\mathcal{M}$ is a model of $\mathfrak{T}$ in some forcing extension of $V$, then $\mathcal{M}$ is a $V$-generic model of $\mathfrak{T}$.
-\end{lem}
-
-\begin{proof}
-This is Lemma 5.30 of \cite{myself}.
 \end{proof}
 
 \section{Local Method Definitions}
@@ -672,6 +620,8 @@ If $V$ is a CTM and $\mathfrak{T} \in V$ is a TCI, then the \emph{evaluation of}
 \begin{defi}
 Let $V$ be a CTM. A set $X \subset V$ is a $\mathbf{M}_S(V)$ \emph{local method definition of small extensions} (henceforth, $\mathbf{M}_S(V)$ \emph{local method definition}) iff it is a $\mathbf{M}_S(V)$ method definition and $X$ is definable (possibly as a proper class) in $V$ with parameters in $V$. 
 \end{defi}
+
+Just like how a formula in the language of arithmetic can be used to pick out a Turing degree, we want to have a TCI in $V$ pick out a degree of small extension of $V$. However, it would be absurd to expect any such TCI to isolate a single such degree, due to the non-constructive nature of outer models. As a result, there is no avoiding fuzziness when we evaluate TCIs to obtain degrees. This is the intuition behind $\mathrm{Eval}^V$ naturally taking TCIs to sets, instead of taking TCIs to points.
 
 It might not be immediately obvious that whenever there are $W$ and $\mathcal{M}$ for which $\mathcal{M} \in W \in \mathbf{M}(V)$ and $\mathcal{M} \models^* \mathfrak{T}$ for some TCI $\mathfrak{T} \in V$, $V[\mathcal{M}]$ must exist. The next proposition shows that one can translate between models of a TCI $\mathfrak{T}$ and subsets of a set associated with $\mathfrak{T}$, in an absolute and uniform manner.
 
@@ -736,7 +686,7 @@ Given a TCI $\mathfrak{T} = (T, \sigma, \dot{\mathcal{U}}, \vartheta)$ and sets 
     V[\mathcal{M}] = V[x] \text{ if } V \text{ is a CTM and } \psi(\mathfrak{T}, \mathcal{M}, x) \text{ for some TCI } \mathfrak{T} \in V \text{.}
 \end{equation*}
 
-Next, observe that we can ``cover'' the entire small outward multiverse with a local method definition.
+Observe that we can ``cover'' the entire small outward multiverse with a local method definition.
 
 \begin{prop}\label{prop326}
 Let $V$ be a CTM. There is a $\mathbf{M}_S(V)$ local method definition $X$ containing only $\Pi_0$ ($= \Sigma_0$) TCIs such that 
@@ -753,6 +703,64 @@ Fix a distinguished unary relation symbol $\dot{\mathcal{U}}$ and let $s \in V$.
 \end{gather*}
 Then $\mathfrak{T}_s$ is a $\Pi_0$ TCI, and its models in any outer model $W$ of $V$ are exactly the subsets of $s$ in $W$. We are done by Fact \ref{fact34} if we set $X := \{\mathfrak{T}_s : s \in V\}$.
 \end{proof}
+
+To kickstart our journey of relating set-theoretic forcing to TCIs, let us introduce the notion of a generic model of a TCI. For future referencing in service of the ease of expression and reading, we define the abbreviation
+\begin{equation*}
+    \mathfrak{A}_{\mathfrak{T}} := (H(|trcl(\mathfrak{T})|^+); \in) \text{.}
+\end{equation*}
+
+\begin{ob}\label{ob331}
+It is easily verifiable from the definitions of $\mathcal{L}_{\mathfrak{T}}$ and $\mathfrak{A}_{\mathfrak{T}}$ that $\mathcal{L}_{\mathfrak{T}} \in \mathfrak{A}_{\mathfrak{T}}$, so we have $[\mathcal{L}_{\mathfrak{T}}]^{< \omega} \in \mathfrak{A}_{\mathfrak{T}}$ as well.
+\end{ob}
+
+\begin{defi}
+A triple $(\mathfrak{T}, \mathfrak{A}, \mathbb{P})$ is \emph{generically sensible} iff 
+\begin{itemize}
+    \item $\mathfrak{T}$ is a TCI,
+    \item $\mathfrak{A} = (A; \in, \Vec{R})$ is a structure expanding on a transitive model of $\mathsf{ZFC - Powerset}$,
+    \item $\mathbb{P}$ is a forcing notion, and
+    \item $\{\mathfrak{T}, \mathbb{P}\} \subset A$.
+\end{itemize}
+\end{defi}
+
+It is clear that $(\mathfrak{T}, \mathfrak{A}_{\mathfrak{T}}, \mathbb{P})$ is a generically sensible triple.
+
+\begin{defi}[Lau, \cite{myself}]
+Given a generically sensible triple $(\mathfrak{T}, \mathfrak{A}, \mathbb{P})$, a $(\mathbb{P}, \mathfrak{A})$\emph{-generic model} of $\mathfrak{T}$ is a model $\mathcal{M}$ of $\mathfrak{T}$ satisfying 
+\begin{equation*}
+    \Sigma(\mathfrak{T}, \mathcal{M}) = (\bigcup g) \cap \mathcal{L}_{\mathfrak{T}}
+\end{equation*} 
+for some $\mathbb{P}$-generic filter $g$ over $\mathfrak{A}$. In this case, we say $g$ \emph{witnesses} $\mathcal{M}$ \emph{is a} $(\mathbb{P}, \mathfrak{A})$-\emph{generic model of} $\mathfrak{T}$. We say $g$ \emph{witnesses a} $(\mathbb{P}, \mathfrak{A})$-\emph{generic model of} $\mathfrak{T}$ iff for some (necessarily unique) $\mathcal{M}$, $g$ witnesses $\mathcal{M}$ is a $(\mathbb{P}, \mathfrak{A})$-generic model of $\mathfrak{T}$.
+
+We call $\mathcal{M}$ a $\mathfrak{A}$\emph{-generic model} of $\mathfrak{T}$ iff for some $\mathbb{P}$, $(\mathfrak{T}, \mathfrak{A}, \mathbb{P})$ is generically sensible and $\mathcal{M}$ is a $(\mathbb{P}, \mathfrak{A})$-generic model of $\mathfrak{T}$.
+
+We call $\mathcal{M}$ a \emph{generic model} of $\mathfrak{T}$ iff for some $\mathfrak{A}$ and $\mathbb{P}$, $(\mathfrak{T}, \mathfrak{A}, \mathbb{P})$ is generically sensible and $\mathcal{M}$ is a $(\mathbb{P}, \mathfrak{A})$-generic model of $\mathfrak{T}$.   
+\end{defi}
+
+\begin{ob}[Lau, \cite{myself}]\label{smallvgen}
+\leavevmode
+\begin{enumerate}[label=(\arabic*)]
+    \item\label{5282} If $g$ witnesses $\mathcal{M}$ is a $(\mathbb{P}, V)$-generic model of $\mathfrak{T}$, and $\bigcup g \subset \mathcal{L}_{\mathfrak{T}}$, then $V[g] = V[\mathcal{M}]$.
+    \item\label{2svg} In the same vein as Observation \ref{ob0}, we see that given any consistent $\Pi_2$ TCI $\mathfrak{T}$, 
+    \begin{align*}
+        \forall x \ ( & x \text{ is a } (\mathbb{P}(\mathfrak{T}), \mathfrak{A}_{\mathfrak{T}}) \text{-generic model of } \mathfrak{T} \\
+        & \iff x \text{ is a } (\mathbb{P}(\mathfrak{T}), V) \text{-generic model of } \mathfrak{T})
+    \end{align*}
+   in every outer model of $V$. As a result, we can safely talk about $(\mathbb{P}(\mathfrak{T}), V)$-generic models of $\mathfrak{T}$ without the need to quantify over all sets.
+\end{enumerate}
+\end{ob}
+
+Our definition of a generic model is naturally arises from a nice characterisation of what we expect a generic model to be.
+
+\begin{lem}\label{gmodelsinfe}
+Let $\mathfrak{T}$ be a TCI. If $\mathcal{M}$ is a model of $\mathfrak{T}$ in some forcing extension of $V$, then $\mathcal{M}$ is a $V$-generic model of $\mathfrak{T}$.
+\end{lem}
+
+\begin{proof}
+This is Lemma 5.30 of \cite{myself}.
+\end{proof}
+
+Lemma \ref{gmodelsinfe} actually tells us that $V$-generic models of a TCI $\mathfrak{T}$ are exactly the models of $\mathfrak{T}$ found in some forcing (i.e. generic) extension of $V$.
 
 We end off this subsection by demonstrating that forcing can be regarded as a local method definition.
 
