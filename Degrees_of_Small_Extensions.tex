@@ -480,7 +480,7 @@ Intuitively, Facts \ref{fact221} and \ref{fact229} tell us that there are many o
 
 \subsection{Theories with Constraints in Interpretation}
 
-\emph{Theories with constraints in interpretation} (henceforth, \emph{TCI}s) were conceived in \cite{myself} as a convenient means of looking at generic objects produced by set-theoretic forcing. 
+\emph{Theories with constraints in interpretation} (henceforth, \emph{TCI}s) were conceived in \cite{myself} as a convenient means of --- among other things --- looking at generic objects produced by set-theoretic forcing.
 
 \begin{defi}(Lau, \cite{myself})
 A \emph{first-order theory with constraints in interpretation} (\emph{first-order TCI}) --- henceforth, just \emph{theory with constraints in interpretation} (\emph{TCI}) --- is a tuple $(T, \sigma, \dot{\mathcal{U}}, \vartheta)$, where
@@ -532,13 +532,13 @@ Let $\phi$ be a first-order formula over a signature $\sigma$. We inductively de
     \item If $n = 0$, then $\phi$ is $\Pi_n$ iff $\phi$ is $\Sigma_n$ iff $\phi$ is quantifier-free.
     \item\label{3292} If $n = m + 1$ for some $m < \omega$, then 
     \begin{enumerate}[label=(\alph*)]
-        \item\label{3292a} $\phi$ is $\Pi_n$ iff there is a $\Sigma_m$ formula $\varphi$, a number $k < \omega$, and variable symbols $x_1, \dots, x_k$ such that 
+        \item\label{3292a} $\phi$ is $\Pi_n$ iff there is a $\Sigma_m$ formula $\varphi$, a number $k < \omega$, and variable symbols $x_1, \dots, x_k$ not bound in $\varphi$, such that 
         \begin{equation*}
             \phi = \ulcorner \forall x_1 \dots \forall x_k \ \varphi \urcorner \text{, and}
         \end{equation*}
-        \item\label{3292b} $\phi$ is $\Sigma_n$ iff there is a $\Pi_m$ formula $\varphi$, a number $k < \omega$, and variable symbols $x_1, \dots, x_k$ such that 
+        \item\label{3292b} $\phi$ is $\Sigma_n$ iff there is a $\Pi_m$ formula $\varphi$, a number $k < \omega$, and variable symbols $x_1, \dots, x_k$ not bound in $\varphi$, such that 
         \begin{equation*}
-            \phi = \ulcorner \forall x_1 \dots \forall x_k \ \varphi \urcorner \text{.}
+            \phi = \ulcorner \exists x_1 \dots \exists x_k \ \varphi \urcorner \text{.}
         \end{equation*}
     \end{enumerate}
 \end{enumerate}
@@ -1224,15 +1224,15 @@ Let $\mathfrak{T} = (T, \sigma, \dot{\mathcal{U}}, \vartheta)$ be a consistent $
 We first apply Lemma \ref{lem350} to obtain a $\Gamma_{\mathfrak{T}}$ such that
 \begin{enumerate}[label=(\alph*)]
     \item\label{3521} $\Gamma_{\mathfrak{T}}$ contains only $\Pi_2$ $(\mathcal{L}_{\mathfrak{T}})^*_{\mathfrak{A}_{\mathfrak{T}}}$ sentences, and
-    \item for every set $x$,
+    \item\label{3522} for every set $x$,
     \begin{equation*}
         \exists \mathcal{M} \ (\mathcal{M} \models^* \mathfrak{T} \text{ and } \Sigma(\mathfrak{T}, \mathcal{M}) = x) \iff x \ \Gamma_{\mathfrak{T}} (\mathcal{L}_{\mathfrak{T}}, \mathfrak{A}_{\mathfrak{T}})\text{-certifies } \emptyset \text{.}
     \end{equation*}
 \end{enumerate}
 Next, note that
-\begin{enumerate}[label=(\arabic*)]
+\begin{enumerate}[label=(\alph*)]
     \setcounter{enumi}{2}
-    \item Observation \ref{ob331} holds,
+    \item\label{3523} Observation \ref{ob331} holds,
     \item $|\mathfrak{A}_{\mathfrak{T}}| = |trcl(\mathfrak{A}_{\mathfrak{T}})|$, and
     \item\label{3525} for all $x$ and $p$,
     \begin{equation*}
