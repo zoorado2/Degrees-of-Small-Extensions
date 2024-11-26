@@ -116,7 +116,7 @@ What if we swop $L$ for $V$ itself? Doing so will obviously result in degrees th
 \begin{figure}[!ht]
     \centering
     \includegraphics[width=\textwidth]{analogy.jpg}
-    \captionsetup{width=0.8\textwidth, justification=centering}
+    \captionsetup{width=0.8\textwidth, format=hang}
     \caption{comparison between conventional notions of relative computability (left) and our generalised notions (right).}
     \label{analogy}
 \end{figure}
@@ -847,7 +847,15 @@ Let $X, Y$ be local method definitions. We say
 \end{enumerate}
 \end{ob}
 
-Intuitively, $Y$ is more complex than $X$ as a definition when $X \leq^M_w Y$ or $X \leq^M Y$, because $Y$ both refines and extends $X$. Refinement occurs because no matter set a description of $X$ picks out, $Y$ contains a description that picks out a smaller non-empty set. Extension occurs because $Y$ may have a description pick out a set that is not covered by any description of $X$. The difference between the two relations then boils down to whether a witness to said refinement and extension exists in $V$.
+Intuitively, $Y$ is more complex than $X$ as a definition when $X \leq^M_w Y$ or $X \leq^M Y$, because $Y$ both refines and extends $X$. Refinement occurs because no matter set a description of $X$ picks out, $Y$ contains a description that picks out a smaller non-empty set. Extension occurs because $Y$ may have a description pick out a set that is not covered by any description of $X$. The difference between the two relations then boils down to whether a witness to said refinement and extension exists in $V$. Figure \ref{intuition} provides one way of visualising $X \leq^M Y$ with witness function $F$.
+
+\begin{figure}[!ht]
+    \centering
+    \centerline{\hspace{1pt}\includegraphics[width=1.05\textwidth]{intuition.jpg}}
+    \captionsetup{width=0.8\textwidth, format=hang}
+    \caption[.]{Visual representation of a function $F$ witnessing $X \leq^M Y$, where $X$ and $Y$ are local method definitions. \\ Here, $B = \mathrm{Eval}^V(F(\mathfrak{T})) \subset \mathrm{Eval}^V(\mathfrak{T}) = A$.}
+    \label{intuition}
+\end{figure}
 
 It would be good if $V$ can decide (albeit not uniformly) whether $X \leq^M Y$ for arbitrary local method definitions $X$ and $Y$. Unfortunately, there seems to be no straightforward indication of that: it is not clear if $V$ is always privy to proof of $X \leq^M Y$. For certain pairs $(X, Y)$ though, $X \leq^M Y$ is provable in $\mathsf{ZFC}$, and so $V$ must know it is true.
 
