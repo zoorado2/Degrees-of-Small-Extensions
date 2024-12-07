@@ -1079,14 +1079,21 @@ or equivalently,
 \end{equation*}
 besides the obvious fact that it is countable and non-zero. Indeed, there seems to be no easy way of separating the rungs of the hierarchy as yet. This appears in stark contrast with the more renowned arithmetical and projective hierarchies, where separation happens ``everywhere''. However, by no means is this a reason to dismiss (our definition of) the hierarchy, or discourage the study thereof. One need not look far to find a well-studied hierarchy of the same ilk with the same ``issue'': the polynomial hierarchy, in which separation of any kind is equivalent to $\mathsf{P} \neq \mathsf{NP}$. 
 
-\begin{ques}
+\begin{ques}\label{q325}
 \leavevmode
 \begin{enumerate}[label=(\arabic*)]
-    \item Are there $m, n < \omega$ for which $\mathsf{\Sigma^M_m} \not\equiv^M \mathsf{\Sigma^M_n}$?
-    \item Is it true that $\mathsf{\Pi^M_1} \leq^M \mathsf{\Sigma^M_0}$?
-    \item Is there a TCI $\mathfrak{T}$ such that $\{\mathfrak{T}\} \not\leq^M \mathsf{Fg}$?
+    \item\label{325a} Are there $m, n < \omega$ for which $\mathsf{\Sigma^M_m} \not\equiv^M \mathsf{\Sigma^M_n}$?
+    \item\label{325b} Is it true that $\mathsf{\Pi^M_1} \leq^M \mathsf{\Sigma^M_0}$?
+    \item\label{325c} Is there a TCI $\mathfrak{T}$ such that $\{\mathfrak{T}\} \not\leq^M \mathsf{Fg}$?
 \end{enumerate}
 \end{ques}
+
+So far, every small extension of $V$ we know how to construct either
+\begin{itemize}
+    \item is a forcing extension of $V$, or
+    \item depends on information extracted from a proper-class-sized fragment of $V$, if not more.
+\end{itemize} 
+Naturally, we might wonder if it is possible to generate small extensions of $V$ based locally on a set in $V$, in a way that differs substantively from set forcing. This is essentially what \ref{325c} of Question \ref{q325} is asking. Should it be answered in the affirmative, non-trivial separation of the local method hierarchy becomes more hopeful, towards which \ref{325a} of Question \ref{q325} can be a guiding question. Should it be answered in the negative, $\mathsf{Fg}$ is a greatest local method definition with respect to $\leq^M$, and the local method hierarchy stops at $\mathsf{\Sigma^M_1}$ --- in this case \ref{325b} of Question \ref{q325} becomes the main question surrounding the relation $\leq^M$. 
 
 \section{Categorising Forcing}
 
