@@ -1,5 +1,5 @@
 % $ biblatex auxiliary file $
-% $ biblatex bbl format version 3.3 $
+% $ biblatex bbl format version 3.2 $
 % Do not modify the above lines!
 %
 % This is an auxiliary file used by the 'biblatex' package.
@@ -18,8 +18,8 @@
 
 
 \refsection{0}
-  \datalist[entry]{ynt/global//global/global/global}
-    \entry{cohen1}{article}{}{}
+  \datalist[entry]{ynt/global//global/global}
+    \entry{cohen1}{article}{}
       \name{author}{1}{}{%
         {{hash=3676bd8b5a6758a014b490225ec91475}{%
            family={Cohen},
@@ -29,12 +29,10 @@
       }
       \strng{namehash}{3676bd8b5a6758a014b490225ec91475}
       \strng{fullhash}{3676bd8b5a6758a014b490225ec91475}
-      \strng{fullhashraw}{3676bd8b5a6758a014b490225ec91475}
       \strng{bibnamehash}{3676bd8b5a6758a014b490225ec91475}
       \strng{authorbibnamehash}{3676bd8b5a6758a014b490225ec91475}
       \strng{authornamehash}{3676bd8b5a6758a014b490225ec91475}
       \strng{authorfullhash}{3676bd8b5a6758a014b490225ec91475}
-      \strng{authorfullhashraw}{3676bd8b5a6758a014b490225ec91475}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -56,7 +54,7 @@
       \verb https://doi.org/10.1073/pnas.50.6.1143
       \endverb
     \endentry
-    \entry{shoenfield}{inproceedings}{}{}
+    \entry{shoenfield}{inproceedings}{}
       \name{author}{1}{}{%
         {{hash=03459e076830692bd4e7b5ff86e8f109}{%
            family={Shoenfield},
@@ -69,12 +67,10 @@
       }
       \strng{namehash}{03459e076830692bd4e7b5ff86e8f109}
       \strng{fullhash}{03459e076830692bd4e7b5ff86e8f109}
-      \strng{fullhashraw}{03459e076830692bd4e7b5ff86e8f109}
       \strng{bibnamehash}{03459e076830692bd4e7b5ff86e8f109}
       \strng{authorbibnamehash}{03459e076830692bd4e7b5ff86e8f109}
       \strng{authornamehash}{03459e076830692bd4e7b5ff86e8f109}
       \strng{authorfullhash}{03459e076830692bd4e7b5ff86e8f109}
-      \strng{authorfullhashraw}{03459e076830692bd4e7b5ff86e8f109}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -87,7 +83,7 @@
       \field{pages}{357\bibrangedash 381}
       \range{pages}{25}
     \endentry
-    \entry{jensencoding}{book}{}{}
+    \entry{jensencoding}{book}{}
       \name{author}{4}{}{%
         {{hash=72caf39e4c7c05aff7168e88f61ceced}{%
            family={Beller},
@@ -115,12 +111,10 @@
       }
       \strng{namehash}{e321bb642bd541a79f5e4f67b5b567eb}
       \strng{fullhash}{995d3dc377617c2b52978bb2a34bbab1}
-      \strng{fullhashraw}{995d3dc377617c2b52978bb2a34bbab1}
       \strng{bibnamehash}{e321bb642bd541a79f5e4f67b5b567eb}
       \strng{authorbibnamehash}{e321bb642bd541a79f5e4f67b5b567eb}
       \strng{authornamehash}{e321bb642bd541a79f5e4f67b5b567eb}
       \strng{authorfullhash}{995d3dc377617c2b52978bb2a34bbab1}
-      \strng{authorfullhashraw}{995d3dc377617c2b52978bb2a34bbab1}
       \field{sortinit}{1}
       \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
@@ -129,7 +123,7 @@
       \field{volume}{47}
       \field{year}{1982}
     \endentry
-    \entry{kunen}{book}{}{}
+    \entry{kunen}{book}{}
       \name{author}{1}{}{%
         {{hash=9bbbc8091281c78067693611cdfae8a1}{%
            family={Kunen},
@@ -142,12 +136,10 @@
       }
       \strng{namehash}{9bbbc8091281c78067693611cdfae8a1}
       \strng{fullhash}{9bbbc8091281c78067693611cdfae8a1}
-      \strng{fullhashraw}{9bbbc8091281c78067693611cdfae8a1}
       \strng{bibnamehash}{9bbbc8091281c78067693611cdfae8a1}
       \strng{authorbibnamehash}{9bbbc8091281c78067693611cdfae8a1}
       \strng{authornamehash}{9bbbc8091281c78067693611cdfae8a1}
       \strng{authorfullhash}{9bbbc8091281c78067693611cdfae8a1}
-      \strng{authorfullhashraw}{9bbbc8091281c78067693611cdfae8a1}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -160,7 +152,7 @@
       \field{pages}{viii+401}
       \range{pages}{-1}
     \endentry
-    \entry{woodingen}{article}{}{}
+    \entry{woodingen}{article}{}
       \name{author}{1}{}{%
         {{hash=aec46f0a7b0eb765653110262007ad27}{%
            family={Woodin},
@@ -173,12 +165,10 @@
       }
       \strng{namehash}{aec46f0a7b0eb765653110262007ad27}
       \strng{fullhash}{aec46f0a7b0eb765653110262007ad27}
-      \strng{fullhashraw}{aec46f0a7b0eb765653110262007ad27}
       \strng{bibnamehash}{aec46f0a7b0eb765653110262007ad27}
       \strng{authorbibnamehash}{aec46f0a7b0eb765653110262007ad27}
       \strng{authornamehash}{aec46f0a7b0eb765653110262007ad27}
       \strng{authorfullhash}{aec46f0a7b0eb765653110262007ad27}
-      \strng{authorfullhashraw}{aec46f0a7b0eb765653110262007ad27}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -190,7 +180,7 @@
       \field{pages}{13\bibrangedash 42}
       \range{pages}{30}
     \endentry
-    \entry{myself}{misc}{}{}
+    \entry{myself}{misc}{}
       \name{author}{1}{}{%
         {{hash=c312cbf964a9f81bebf7230c6637a56b}{%
            family={Lau},
@@ -200,12 +190,11 @@
       }
       \strng{namehash}{c312cbf964a9f81bebf7230c6637a56b}
       \strng{fullhash}{c312cbf964a9f81bebf7230c6637a56b}
-      \strng{fullhashraw}{c312cbf964a9f81bebf7230c6637a56b}
       \strng{bibnamehash}{c312cbf964a9f81bebf7230c6637a56b}
       \strng{authorbibnamehash}{c312cbf964a9f81bebf7230c6637a56b}
       \strng{authornamehash}{c312cbf964a9f81bebf7230c6637a56b}
       \strng{authorfullhash}{c312cbf964a9f81bebf7230c6637a56b}
-      \strng{authorfullhashraw}{c312cbf964a9f81bebf7230c6637a56b}
+      \field{extraname}{1}
       \field{sortinit}{2}
       \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
@@ -216,6 +205,39 @@
       \field{year}{2024}
       \verb{eprint}
       \verb 2402.01213
+      \endverb
+    \endentry
+    \entry{rasm}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c312cbf964a9f81bebf7230c6637a56b}{%
+           family={Lau},
+           familyi={L\bibinitperiod},
+           given={Desmond},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{c312cbf964a9f81bebf7230c6637a56b}
+      \strng{fullhash}{c312cbf964a9f81bebf7230c6637a56b}
+      \strng{bibnamehash}{c312cbf964a9f81bebf7230c6637a56b}
+      \strng{authorbibnamehash}{c312cbf964a9f81bebf7230c6637a56b}
+      \strng{authornamehash}{c312cbf964a9f81bebf7230c6637a56b}
+      \strng{authorfullhash}{c312cbf964a9f81bebf7230c6637a56b}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.LO}
+      \field{eprinttype}{arXiv}
+      \field{title}{Relative Constructibility via Restricted Abstract State Machines}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2412.20432
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2412.20432
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2412.20432
       \endverb
     \endentry
   \enddatalist
